@@ -30,7 +30,7 @@ filetype on
 filetype plugin indent on
 au FileType python set omnifunc=pythoncomplete#Complete
 
-%{fugitive#statusline()}
+"{fugitive#statusline()}
 let g:SuperTabDefaultCompletionType = "context"
 let $LANG = 'en_US'
 let g:pyflaskes_use_quickfix = 0
