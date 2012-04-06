@@ -7,14 +7,14 @@ set softtabstop=4
 set foldmethod=indent
 set foldlevel=99
 set completeopt=menuone,longest,preview
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
-
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
 
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
@@ -35,4 +35,3 @@ let g:SuperTabDefaultCompletionType = "context"
 let $LANG = 'en_US'
 let g:pyflaskes_use_quickfix = 0
 let g:pep8_map='<leader>8'
-
