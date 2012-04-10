@@ -165,3 +165,4 @@ svgetinfo (){
 alias svdiff='sv diff --diff-cmd fmdiff' # OS-X SPECIFIC
 # Use diff for command line diff, use fmdiff for gui diff, and svdiff for subversion diff
 
+source ~/.git-completion.bash
