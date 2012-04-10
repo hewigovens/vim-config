@@ -11,6 +11,12 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+set showcmd
+set noerrorbells
+set report=0
+set showmatch
+
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
 
 call pathogen#runtime_append_all_bundles()
