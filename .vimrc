@@ -15,6 +15,7 @@ set showcmd
 set noerrorbells
 set report=0
 set showmatch
+set backup
 
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
