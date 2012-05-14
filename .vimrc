@@ -42,3 +42,4 @@ let g:SuperTabDefaultCompletionType = "context"
 let $LANG = 'en_US'
 let g:pyflaskes_use_quickfix = 0
 let g:pep8_map='<leader>8'
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
