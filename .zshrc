@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew autojump node npm python)
+plugins=(git brew autojump node npm python pip ruby rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,3 +37,23 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin
 export PROMPT='%{$fg[green]%}%n@%m%{$reset_color%} %{$fg_bold[red]%}➜  %{$reset_color%}%{$fg[blue]%}%d
 $ %{$reset_color%}'
+
+# Other aliases ----------------------------------------------------
+alias ll='ls -alhO@'
+alias la='ls -a'
+alias lla='ls -lah'
+
+# Misc
+alias g='grep -ni'  # Case insensitive grep
+alias f='find . -iname'
+alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
+alias top='top -o cpu'
+alias systail='tail -f /var/log/system.log'
+alias m='more'
+alias df='df -h'
+
+# Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
