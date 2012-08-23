@@ -97,12 +97,12 @@ shopt -s cdable_vars # set the bash option so that no '$' is required when using
 
 # Other aliases ----------------------------------------------------
 #alias ll='ls -hl'
-alias ll='ls -al'
+alias ll='ls -alhO@'
 alias la='ls -a'
 alias lla='ls -lah'
 
 # Misc
-alias g='grep -i'  # Case insensitive grep
+alias g='grep -ni'  # Case insensitive grep
 alias f='find . -iname'
 alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
 alias top='top -o cpu'
@@ -166,3 +166,6 @@ alias svdiff='sv diff --diff-cmd fmdiff' # OS-X SPECIFIC
 # Use diff for command line diff, use fmdiff for gui diff, and svdiff for subversion diff
 
 source ~/.git-completion.bash
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
