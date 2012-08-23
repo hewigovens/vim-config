@@ -73,3 +73,6 @@
 [submodule "bundle/xmledit"]
 	path = bundle/xmledit
 	url = git://github.com/sukima/xmledit.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = git://github.com/tomtom/tcomment_vim.git
