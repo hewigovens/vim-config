@@ -67,9 +67,9 @@
 [submodule "bundle/vim-golang"]
 	path = bundle/vim-golang
 	url = git://github.com/jnwhiteh/vim-golang.git
-[submodule "xmledit"]
-	path = xmledit
-	url = git://github.com/sukima/xmledit.git
-[submodule "vim-markdown"]
-	path = vim-markdown
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = git://github.com/sukima/xmledit.git
