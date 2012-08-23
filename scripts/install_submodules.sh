@@ -14,4 +14,6 @@ echo "install command-t..."
 echo "install pyflakes..."
 (cd bundle/pyflakes/ftplugin/python/pyflakes && sudo python setup.py install) || echo "pyflakes installation failed"
 
+echo "patch pydiction keybindings to <C-J>"
+patch -p0 -i ~/.vim/scripts/keybinding.patch
 exit 0
