@@ -1,3 +1,6 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 set nu
 set langmenu=en_US
 set tabstop=4
@@ -18,10 +21,6 @@ set showmatch
 set backup
 
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-
-
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
