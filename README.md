@@ -1,1 +1,1 @@
-personal vim configs
+personal vim/bashrc/zshrc configs
