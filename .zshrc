@@ -6,6 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+# ZSH_THEME="powerline"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -35,8 +36,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin
-export PROMPT='%{$fg[green]%}%n@%m%{$reset_color%} %{$fg_bold[red]%}➜  %{$reset_color%}%{$fg[blue]%}%d
-$ %{$reset_color%}'
+export PROMPT='%{$fg[green]%}%n@%m%{$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+#export PROMPT='%{$fg[green]%}%n@%m%{$reset_color%} %{$fg_bold[red]%}➜  %{$reset_color%}%{$fg[blue]%}%d
+#$ %{$reset_color%}'
 
 # Other aliases ----------------------------------------------------
 alias ll='ls -alhO@'

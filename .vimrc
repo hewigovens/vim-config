@@ -43,7 +43,7 @@ set hidden
 set backup
 
 "GUI
-set mouse=a
+"set mouse=a
 
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
