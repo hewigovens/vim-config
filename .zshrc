@@ -49,6 +49,7 @@ alias lla='ls -lah'
 alias g='grep -ni'  # Case insensitive grep
 alias f='find . -iname'
 alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
+alias duck='du -h -d1' 
 alias top='top -o cpu'
 alias systail='tail -f /var/log/system.log'
 alias m='more'
