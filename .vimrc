@@ -45,6 +45,8 @@ set backup
 "GUI
 "set mouse=a
 
+"Mapping
+imap jj <Esc>
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
 map <leader>n :NERDTreeToggle<CR>
