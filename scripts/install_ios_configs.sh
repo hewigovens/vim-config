@@ -10,8 +10,8 @@ if [ ! -f ~/.bash_profile ];then
 fi
 
 if [ -n `which sed` ];then
-    sed -i '.bak' 's/root:\/bin\/sh/root:\/bin\/bash/g' /etc/master.passwd
-    sed -i '.bak' 's/mobile:\/bin\/sh/mobile:\/bin\/bash/g' /etc/master.passwd
+    sed -i 's/root:\/bin\/sh/root:\/bin\/bash/g' /etc/master.passwd
+    sed -i 's/mobile:\/bin\/sh/mobile:\/bin\/bash/g' /etc/master.passwd
 fi
 
 ln -s ~/.vim/.bashrc ~/.bashrc
