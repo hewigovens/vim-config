@@ -7,8 +7,8 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
 export CLICOLOR=1 
 
-alias ls='ls -G'  # OS-X SPECIFIC - the -G command in OS-X is for colors, in Linux it's no groups
-#alias ls='ls --color=auto' # For linux, etc
+#alias ls='ls -G'  # OS-X SPECIFIC - the -G command in OS-X is for colors, in Linux it's no groups
+alias ls='ls --color=auto' # For linux, etc
 
 # ls colors, see: http://www.linux-sxs.org/housekeeping/lscolors.html
 #export LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rb=90'  #LS_COLORS is not supported by the default ls command in OS-X
@@ -96,7 +96,7 @@ shopt -s cdable_vars # set the bash option so that no '$' is required when using
 
 
 # Other aliases ----------------------------------------------------
-#alias ll='ls -hl'
+alias l='ls -ahl'
 alias ll='ls -alhO@'
 alias la='ls -a'
 alias lla='ls -lah'
@@ -165,7 +165,7 @@ svgetinfo (){
 alias svdiff='sv diff --diff-cmd fmdiff' # OS-X SPECIFIC
 # Use diff for command line diff, use fmdiff for gui diff, and svdiff for subversion diff
 
-source ~/.git-completion.bash
+source ~/.vim/.git-completion.bash
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
