@@ -9,8 +9,6 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME="powerline"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -30,20 +28,18 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew autojump node npm python pip ruby rvm)
+plugins=(git python)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin
 export PROMPT='%{$fg[green]%}%n@%m%{$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
-#export PROMPT='%{$fg[green]%}%n@%m%{$reset_color%} %{$fg_bold[red]%}➜  %{$reset_color%}%{$fg[blue]%}%d
-#$ %{$reset_color%}'
 
 # Other aliases ----------------------------------------------------
 alias ll='ls -alhO@'
 alias la='ls -a'
 alias lla='ls -lah'
+alias p='pwd'
 
 # Misc
 alias g='grep -ni'  # Case insensitive grep
@@ -60,6 +56,5 @@ alias gl='git log -p --color --stat --graph'
 
 # Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
-
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
