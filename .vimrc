@@ -4,6 +4,7 @@ call pathogen#infect()
 
 "Basic
 set nocompatible
+set laststatus=2
 set nu
 set langmenu=en_US
 set noerrorbells
