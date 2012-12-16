@@ -14,4 +14,5 @@ ln -s ~/.vim/.vimrc ~/.vimrc
 ln -s ~/.vim/.bashrc ~/.bashrc
 ln -s ~/.vim/.zshrc ~/.zshrc
 ln -s ~/.vim/.git-completion.bash ~/.git-completion.bash
+ln -s ~/.vim/.gitconfig ~/.gitconfig
 exit 0
