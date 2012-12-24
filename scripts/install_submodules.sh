@@ -16,4 +16,10 @@ echo "install pyflakes..."
 
 echo "patch pydiction keybindings to <C-J>"
 patch -p0 -i ~/.vim/scripts/keybinding.patch
+
+echo "check if need to install oh-my-zsh"
+if [ -d ~/.oh-my-zsh ]; then
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+fi
+
 exit 0
