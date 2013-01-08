@@ -14,7 +14,8 @@ if [ -n `which sed` ];then
     sed -i 's/mobile:\/bin\/sh/mobile:\/bin\/bash/g' /etc/master.passwd
 fi
 
+rm -rf ~/.bashrc
+rm -rf ~/.vimrc
+
 ln -s ~/.vim/.bashrc ~/.bashrc
-ln -s ~/.vim/.bash_profile ~/.bash_profile
 ln -s ~/.vim/.vimrc ~/.vimrc
-ln -s ~/.vim/.gitconfig ~/.gitconfig
