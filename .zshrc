@@ -35,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PROMPT='%{$fg[green]%}%n@%m%{$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} 
-% $ %{$reset_color%}'
+% %# %{$reset_color%}'
 
 # Other aliases ----------------------------------------------------
 alias ll='ls -alhO@'
