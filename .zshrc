@@ -34,7 +34,8 @@ source $ZSH/oh-my-zsh.sh
 # source ~/.vim/.incr.zsh
 
 # Customize to your needs...
-export PROMPT='%{$fg[green]%}%n@%m%{$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+export PROMPT='%{$fg[green]%}%n@%m%{$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} 
+% $ %{$reset_color%}'
 
 # Other aliases ----------------------------------------------------
 alias ll='ls -alhO@'
