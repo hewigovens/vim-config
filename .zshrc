@@ -42,6 +42,9 @@ alias ll='ls -alhO@'
 alias la='ls -a'
 alias lla='ls -lah'
 alias p='pwd'
+alias x2b='plutil -convert binary1'
+alias b2x='plutil -convert xml1'
+alias rmdsstore='find . -name "*.DS_Store" -exec rm {} \;'
 
 # Misc
 alias g='grep -ni'  # Case insensitive grep
