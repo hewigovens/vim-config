@@ -67,6 +67,7 @@ syntax on
 filetype on 
 filetype plugin indent on
 
+let g:neocomplcache_enable_at_startup = 1
 let g:SuperTabDefaultCompletionType = "context"
 let g:pyflaskes_use_quickfix = 0
 let g:pep8_map='<leader>8'
@@ -74,7 +75,7 @@ let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html,markdown set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
