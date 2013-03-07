@@ -61,6 +61,7 @@ map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 map <leader>mg :call MakeGreen()<CR>
 nmap <leader>a <Esc>:Ack!
+nmap <F8> :TagbarToggle<CR>
 
 colorscheme desert
 syntax on
@@ -79,4 +80,4 @@ autocmd FileType html,markdown set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
-"autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd l
