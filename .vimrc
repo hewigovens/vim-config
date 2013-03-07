@@ -9,7 +9,7 @@ set nu
 set langmenu=en_US
 set noerrorbells
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-"set cursorline
+set cursorline
 
 "Indentation
 set tabstop=4
@@ -56,7 +56,8 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 imap jj <Esc>
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
-map <leader>n :NERDTreeToggle<CR>
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+" map <leader>n :NERDTreeToggle<CR>
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 map <leader>mg :call MakeGreen()<CR>
@@ -73,6 +74,7 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:pyflaskes_use_quickfix = 0
 let g:pep8_map='<leader>8'
 let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
+let g:nerdtree_tabs_open_on_console_startup=1
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -80,4 +82,4 @@ autocmd FileType html,markdown set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd VimEnter * wincmd l
+autocmd VimEnter * wincmd 1
