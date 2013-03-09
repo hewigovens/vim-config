@@ -8,8 +8,12 @@ set laststatus=2
 set nu
 set langmenu=en_US
 set noerrorbells
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 set cursorline
+
+"Statusline
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+set wildmenu
+set wildmode=longest,list,full
 
 "Indentation
 set tabstop=4
@@ -36,6 +40,8 @@ set showmatch
 set linebreak
 set report=0
 set encoding=utf-8
+" set spell
+set nowrap
 
 "File
 set autoread
@@ -75,6 +81,10 @@ let g:pyflaskes_use_quickfix = 0
 let g:pep8_map='<leader>8'
 let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
 let g:nerdtree_tabs_open_on_console_startup=1
+
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
