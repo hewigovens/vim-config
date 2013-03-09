@@ -63,12 +63,16 @@ imap jj <Esc>
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-" map <leader>n :NERDTreeToggle<CR>
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 map <leader>mg :call MakeGreen()<CR>
 nmap <leader>a <Esc>:Ack!
 nmap <F8> :TagbarToggle<CR>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 colorscheme desert
 syntax on
@@ -92,4 +96,5 @@ autocmd FileType html,markdown set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
+
 autocmd VimEnter * wincmd 1

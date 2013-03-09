@@ -2,3 +2,4 @@
 *~
 .netrwhist
 *.swp
+undodir/*.*
