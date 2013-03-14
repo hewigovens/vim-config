@@ -48,6 +48,7 @@ alias sudo='sudo '
 alias x2b='plutil -convert binary1'
 alias b2x='plutil -convert xml1'
 alias rmdsstore='find . -name "*.DS_Store" -exec rm {} \;'
+alias pplist='/usr/libexec/PlistBuddy -c "Print"'
 
 # Misc
 alias g='grep -ni'  # Case insensitive grep
