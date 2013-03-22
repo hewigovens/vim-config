@@ -68,6 +68,7 @@ map <leader>r :RopeRename<CR>
 map <leader>mg :call MakeGreen()<CR>
 nmap <leader>a <Esc>:Ack!
 nmap <F8> :TagbarToggle<CR>
+nmap <C-c><C-c> :!gcc -Wall % -o %:r.out<CR>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
