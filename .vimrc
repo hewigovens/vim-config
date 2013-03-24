@@ -66,9 +66,14 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 map <leader>mg :call MakeGreen()<CR>
+map <leader>co :copen<CR>
+map <leader>cc :cclose<CR>
 nmap <leader>a <Esc>:Ack!
 nmap <F8> :TagbarToggle<CR>
 nmap <C-c><C-c> :!gcc -Wall % -o %:r.out<CR>
+
+vmap <tab>   >gv
+vmap <s-tab> <gv
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
