@@ -36,7 +36,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 IPADDR=`ifconfig en0 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
-if [[ -z $IPADDR]]; then
+if [[ -z $IPADDR ]]; then
     IPADDR=`hostname`
 fi
 
