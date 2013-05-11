@@ -34,8 +34,12 @@ source $ZSH/oh-my-zsh.sh
 # source ~/.vim/.incr.zsh
 
 # Customize to your needs...
-#
-IPADDR=`ifconfig en0 | grep -v inet6 | grep inet | awk '{print $2}'`
+
+IPADDR=`ifconfig en0 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
+if [[ -z $IPADDR]]; then
+    IPADDR=`hostname`
+fi
+
 export PROMPT='%{$fg[green]%}%n@$IPADDR$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} 
 % %# %{$reset_color%}'
 
