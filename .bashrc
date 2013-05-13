@@ -67,7 +67,7 @@ if [[ -z $IP_ADDR ]]; then
   IP_ADDR=`hostname`
 fi
 
-export PS1="\[${COLOR_GREEN}\]${USER}@${IP_ADDR}\[${COLOR_BLUE}\] \w\$(__git_ps1)\n\$\[${COLOR_NC}\] "
+export PS1="\[${COLOR_GREEN}\]${USER}@${IP_ADDR}\[${COLOR_LIGHT_BLUE}\] \w\$(__git_ps1)\n\$\[${COLOR_NC}\] "
 
 # This runs before the prompt and sets the title of the xterm* window.  If you set the title in the prompt
 # weird wrapping errors occur on some systems, so this method is superior
