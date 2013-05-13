@@ -110,14 +110,5 @@ alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' 
 # Editors ----------------------------------------------------------
 export EDITOR='vim'  #Command line
 
-# git complete settings
-if [[ -f ~/.vim/.git-completion.bash ]]; then
-  source ~/.vim/.git-completion.bash
-fi
-
-if [[ -f ~/.vim/.git-prompt.bash ]]; then
-  source ~/.vim/.git-prompt.bash
-fi
-
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
