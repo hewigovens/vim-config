@@ -8,8 +8,6 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 # ZSH_THEME="powerline"
 
-# Example aliases
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -31,9 +29,10 @@ ZSH_THEME="robbyrussell"
 plugins=(git python brew)
 
 source $ZSH/oh-my-zsh.sh
-# source ~/.vim/.incr.zsh
 
-# Customize to your needs...
+if [[ -f ~/.vim/.alias ]]; then
+    source ~/.vim/.alias
+fi
 
 IPADDR=`ifconfig en0 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
 if [[ -z $IPADDR ]]; then
@@ -42,39 +41,5 @@ fi
 
 export PROMPT='%{$fg[green]%}%n@$IPADDR$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} 
 % %# %{$reset_color%}'
-
-# Other aliases ----------------------------------------------------
-alias ll='ls -alhO@'
-alias la='ls -a'
-alias lla='ls -lah'
-alias p='pwd'
-alias sudo='sudo '
-alias x2b='plutil -convert binary1'
-alias b2x='plutil -convert xml1'
-alias rmdsstore='find . -name "*.DS_Store" -exec rm {} \;'
-alias pplist='/usr/libexec/PlistBuddy -c "Print"'
-
-# Misc
-alias g='grep -ni'  # Case insensitive grep
-alias f='find . -iname'
-alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
-alias duck='du -h -d1' 
-alias systail='tail -f /var/log/system.log'
-alias m='more'
-alias df='df -h'
-
-# git short
-alias gs='git status'
-alias gl='git log -p --color --stat --graph'
-alias gf='git diff --color'
-
-# tmux
-alias tn='tmux new-session -s'
-alias tl='tmux list-session'
-alias ta='tmux attach -t'
-alias td='tmux detach'
-
-# Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
-alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

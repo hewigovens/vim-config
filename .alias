@@ -1,0 +1,34 @@
+# Nav
+alias ..='cd ..'
+alias ...='cd .. ; cd ..'
+alias l='ls -alhO'
+alias ll='ls -alhO@'
+alias la='ls -a'
+alias lla='ls -lah'
+alias p='pwd'
+
+# Utils
+alias x2b='plutil -convert binary1'
+alias b2x='plutil -convert xml1'
+alias rmdsstore='find . -name "*.DS_Store" -exec rm {} \;'
+alias pplist='/usr/libexec/PlistBuddy -c "Print"'
+alias psgrep='ps -ef | grep -v grep | grep -ni'
+alias g='grep -ni'  # Case insensitive grep
+alias f='find . -iname'
+alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
+alias duck='du -h -d1' 
+alias systail='tail -f /var/log/system.log'
+alias m='more'
+alias df='df -h'
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+
+# git short
+alias gs='git status'
+alias gl='git log -p --color --stat --graph'
+alias gf='git diff --color'
+
+# tmux
+alias tn='tmux new-session -s'
+alias tl='tmux list-session'
+alias ta='tmux attach -t'
+alias td='tmux detach'

@@ -82,30 +82,11 @@ function xtitle {  # change the title of your xterm* window
   echo -ne "\033]0;$1\007" 
 }
 
-# Navigation -------------------------------------------------------
-alias ..='cd ..'
-alias ...='cd .. ; cd ..'
 
-# Misc
-alias l='ls -ahl'
-alias ll='ls -alhO@'
-alias la='ls -a'
-alias lla='ls -lah'
-alias g='grep -ni'  # Case insensitive grep
-alias f='find . -iname'
-alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
-alias top='top -o cpu'
-alias systail='tail -f /var/log/system.log'
-alias m='more'
-alias df='df -h'
-
-# git short
-alias gs='git status'
-alias gl='git log -p --color --stat --graph'
-alias gf='git diff --color'
-
-# Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
-alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+# alias
+if [[ -f ~/.vim/.alias ]]; then
+    source ~/.vim/.alias
+fi
 
 # Editors ----------------------------------------------------------
 export EDITOR='vim'  #Command line
