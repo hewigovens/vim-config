@@ -62,10 +62,17 @@ alias duck='du -h -d1'
 alias systail='tail -f /var/log/system.log'
 alias m='more'
 alias df='df -h'
+
 # git short
 alias gs='git status'
 alias gl='git log -p --color --stat --graph'
 alias gf='git diff --color'
+
+# tmux
+alias tn='tmux new-session -s'
+alias tl='tmux list-session'
+alias ta='tmux attach -t'
+alias td='tmux detach'
 
 # Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
