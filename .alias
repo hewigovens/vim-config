@@ -34,7 +34,7 @@ alias tl='tmux list-session'
 alias ta='tmux attach -t'
 alias td='tmux detach'
 
-if [[ "`uname`" == "linux" ]];then
+if [[ "`uname|tr '[A-Z]' '[a-z]'`" == "linux" ]];then
     source ~/.vim/.alias.linux
 else
     source ~/.vim/.alias.darwin
