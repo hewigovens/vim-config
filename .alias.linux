@@ -1,0 +1,7 @@
+
+# Nav
+alias l='ls -alh'
+alias ll='ls -alh'
+
+# Utils
+alias duck='du -h --max-depth=1'

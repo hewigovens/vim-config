@@ -1,0 +1,13 @@
+# Nav
+alias l='ls -alhO'
+alias ll='ls -alhO@'
+
+# Utils
+alias x2b='plutil -convert binary1'
+alias b2x='plutil -convert xml1'
+alias rmdsstore='find . -name "*.DS_Store" -exec rm {} \;'
+alias pplist='/usr/libexec/PlistBuddy -c "Print"'
+alias plistbuddy='/usr/libexec/PlistBuddy'
+alias plisteditor='open -b com.apple.PropertyListEditor'
+alias listallkext='kextstat -l'
+alias listkext='kextstat -l | grep -v apple'

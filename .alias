@@ -33,3 +33,9 @@ alias tn='tmux new-session -s'
 alias tl='tmux list-session'
 alias ta='tmux attach -t'
 alias td='tmux detach'
+
+if [[ "`uname`" == "linux" ]];then
+    source ~/.vim/.alias.linux
+else
+    source ~/.vim/.alias.darwin
+fi
