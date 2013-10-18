@@ -34,8 +34,16 @@ if [[ -f ~/.vim/.alias ]]; then
     source ~/.vim/.alias
 fi
 
-IPADDR=`ifconfig en0 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
-if [[ -z $IPADDR ]]; then
+# ethernet
+IPADDR0=`ifconfig en0 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
+# wifi
+IPADDR1=`ifconfig en1 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
+
+if [[ ! -z $IPADDR0 ]]; then
+    IPADDR=$IPADDR0
+elif [[ ! -z $IPADDR1 ]]; then
+    IPADDR=$IPADDR1
+else
     IPADDR=`hostname`
 fi
 
