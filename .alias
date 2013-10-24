@@ -27,6 +27,7 @@ alias plistbuddy='/usr/libexec/PlistBuddy'
 alias gs='git status'
 alias gl='git log -p --color --stat --graph'
 alias gf='git diff --color'
+alias gft='git difftool'
 
 # tmux
 alias tn='tmux new-session -s'
