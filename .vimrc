@@ -80,6 +80,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"Custom Command
+:command Save w !sudo tee %
+
 colorscheme desert
 syntax on
 filetype on 
