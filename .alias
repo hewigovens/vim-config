@@ -1,6 +1,6 @@
 # Nav
 alias ..='cd ..'
-alias ...='cd .. ; cd ..'
+
 alias l='ls -alhO'
 alias ll='ls -alhO@'
 alias la='ls -a'
@@ -34,6 +34,17 @@ alias tn='tmux new-session -s'
 alias tl='tmux list-session'
 alias ta='tmux attach -t'
 alias td='tmux detach'
+
+# functions, finally
+
+gbk2utf8()
+{
+    if [[ -z "$1" ]]; then
+        echo "usage:gbk2uft8 filenmae"
+    fi
+
+    iconv -f gbk -t utf-8 "$1" > "$1".convert
+}
 
 if [[ "`uname|tr '[A-Z]' '[a-z]'`" == "linux" ]];then
     source ~/.vim/.alias.linux
