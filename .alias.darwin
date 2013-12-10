@@ -35,7 +35,7 @@ appsetting()
         LANGS=$1
         #zsh
         setopt shwordsplit
-        defaults delete "$BUNDLE_ID" AppleLanguages
+        defaults delete "$BUNDLE_ID" AppleLanguages 2>/dev/null
         for lang in $LANGS; do
             defaults write "$BUNDLE_ID" AppleLanguages -array-add $lang
         done
