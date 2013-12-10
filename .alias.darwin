@@ -11,3 +11,35 @@ alias plistbuddy='/usr/libexec/PlistBuddy'
 alias plisteditor='open -b com.apple.PropertyListEditor'
 alias listallkext='kextstat -l'
 alias listkext='kextstat -l | grep -v apple'
+
+appsetting()
+{
+    #maybe a more powerful python version someday
+    if [[ -z $1 ]] || [[ -z $2 ]]; then
+        printf "Usage: appsetting [language code] /path/to/app"
+        printf "\n"
+        printf "Language code list:\n\t"
+        printf "defaults read 'Apple Global Domain' AppleLanguages"
+        printf "\n"
+        printf "Example:\n\t"
+        printf "appsetting \"zh-Hans en ja\" /Applications/Mail.app"
+        printf "\n"
+        return 0
+    fi
+
+    DIR_PATH="$(dirname $2)"
+    APP_PATH="$(basename $2)"
+    BUNDLE_ID="$(/usr/libexec/PlistBuddy -c "print :CFBundleIdentifier" "${DIR_PATH}/${APP_PATH}"/Contents/Info.plist)"
+    if [[ ! -z $BUNDLE_ID ]]; then
+        #set -x
+        LANGS=$1
+        #zsh
+        setopt shwordsplit
+        defaults delete "$BUNDLE_ID" AppleLanguages
+        for lang in $LANGS; do
+            defaults write "$BUNDLE_ID" AppleLanguages -array-add $lang
+        done
+        unsetopt shwordsplit
+        #set +x
+    fi
+}
