@@ -23,10 +23,11 @@ alias df='df -h'
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 alias plistbuddy='/usr/libexec/PlistBuddy'
 
-# git short
+# custom git short, see all alias: alias | grep git
 alias gs='git status'
+alias gu='git pull'
 alias gl='git log -p --color --stat --graph'
-alias gf='git diff --color'
+alias gf='git diff --color --ignore-space-at-eol'
 alias gft='git difftool'
 
 # tmux
