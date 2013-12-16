@@ -22,11 +22,13 @@ alias m='more'
 alias df='df -h'
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 alias plistbuddy='/usr/libexec/PlistBuddy'
+alias cls='clear'
 
 # custom git short, see all alias: alias | grep git
 alias gs='git status'
 alias gu='git pull'
 alias gl='git log -p --color --stat --graph'
+alias glf='git log -p --color --stat --graph --follow'
 alias gf='git diff --color --ignore-space-at-eol'
 alias gft='git difftool'
 
