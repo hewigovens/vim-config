@@ -8,10 +8,6 @@ alias lla='ls -lah'
 alias p='pwd'
 
 # Utils
-alias x2b='plutil -convert binary1'
-alias b2x='plutil -convert xml1'
-alias rmdsstore='find . -name "*.DS_Store" -exec rm {} \;'
-alias pplist='/usr/libexec/PlistBuddy -c "Print"'
 alias psgrep='ps -ef | grep -v grep | grep -ni'
 alias g='grep -ni'  # Case insensitive grep
 alias f='find . | grep -ni' 
@@ -21,7 +17,6 @@ alias systail='tail -f /var/log/system.log'
 alias m='more'
 alias df='df -h'
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
-alias plistbuddy='/usr/libexec/PlistBuddy'
 alias cls='clear'
 
 # custom git short, see all alias: alias | grep git

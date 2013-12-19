@@ -16,9 +16,6 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/Command-T.git
-[submodule "pyflakes-pathogen"]
-	path = pyflakes-pathogen
-	url = https://github.com/mitechie/pyflakes-pathogen.git
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
@@ -55,9 +52,6 @@
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
-[submodule "bundle/pyflakes"]
-	path = bundle/pyflakes
-	url = git://github.com/kevinw/pyflakes-vim.git
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
@@ -103,3 +97,6 @@
 [submodule "bundle/multiple-cursors"]
 	path = bundle/multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git

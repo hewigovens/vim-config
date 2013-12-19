@@ -1,11 +1,11 @@
-##personal vimrc/bashrc/zshrc configs
-
-`brew/apt-get/yum install git curl patch python ctags`
+##personal vim/zsh/bash configs
 
 
 ##Installation
-1. script/install_submodules.sh
-2. script/install_configs.sh
+0. git clone https://github.com/hewigovens/vim-config ~/.vim
+1. cd script
+1. ./install_submodules.sh
+2. ./install_configs.sh
 
 ##Vim
 * Syntax highlighting
@@ -32,3 +32,13 @@
 * Smart Auto-completion
 * - bundle/snipmate, bundle/supertab, bundle/neocomplcache
 * Theme Desert
+
+##Handy Shortcuts
+
+* plistbuddy -> Shortcut to `/usr/libexec/PlistBuddy`
+* plisteditor -> Shortcut to XCode Property List Editor
+* pplist -> Pretty print plist files
+* x2b/b2x -> Convert plist from plain format to binary or vice versa
+* gbk2utf8 -> Convert file encoding from gbk to utf-8
+* psgrep -> Shortcut to `ps -ef | grep -v grep | grep -ni`
+* appsetting -> Set prefer language for app

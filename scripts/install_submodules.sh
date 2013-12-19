@@ -11,15 +11,24 @@ git submodule foreach git submodule update --init
 echo "install command-t..."
 (cd bundle/command-t/ruby/command-t && ruby extconf.rb && make) || echo "command-t installation failed"
 
-echo "install pyflakes..."
-(cd bundle/pyflakes/ftplugin/python/pyflakes && sudo python setup.py install) || echo "pyflakes installation failed"
-
 echo "patch pydiction keybindings to <C-J>"
 patch -p0 -i ~/.vim/scripts/keybinding.patch
 
 echo "check if need to install oh-my-zsh"
 if [ ! -d ~/.oh-my-zsh ]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+fi
+
+echo "check if need to install homebrew"
+if [ ! -f /usr/local/bin/brew ]; then
+    if [[ "`uname|tr '[A-Z]' '[a-z]'`" == "darwin" ]]; then
+        ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    fi
+fi
+
+echo "try install ctags/autojump/wget"
+if [ -f /usr/local/bin/brew ]; then
+    brew install ctags autojump
 fi
 
 exit 0
