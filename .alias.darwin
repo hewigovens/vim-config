@@ -12,6 +12,28 @@ alias plisteditor='open -b com.apple.PropertyListEditor'
 alias listallkext='kextstat -l'
 alias listkext='kextstat -l | grep -v apple'
 
+show_desktop_icons()
+{
+    defaults write com.apple.finder CreateDesktop -bool true
+    restart_finder
+}
+
+hide_desktop_icons()
+{
+    defaults write com.apple.finder CreateDesktop -bool false
+    restart_finder
+}
+
+restart_finder()
+{
+    osascript <<EOF
+tell application "Finder"
+    quit
+end tell
+EOF
+    open -a Finder
+}
+
 appsetting()
 {
     #maybe a more powerful python version someday
