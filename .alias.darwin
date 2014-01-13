@@ -34,11 +34,27 @@ EOF
     open -a Finder
 }
 
+stop_goagent()
+{
+    sudo launchctl unload /Library/LaunchDaemons/org.goagent.macos.plist
+}
+
+start_goagent()
+{
+    sudo launchctl load /Library/LaunchDaemons/org.goagent.macos.plist
+}
+
+restart_goagent()
+{
+    stop_goagent
+    start_goagent
+}
+
 appsetting()
 {
     #maybe a more powerful python version someday
     if [[ -z $1 ]] || [[ -z $2 ]]; then
-        printf "Usage: appsetting [language code] /path/to/app"
+        printf "Usage: appsetting [language code] /path/to/app"bash
         printf "\n"
         printf "Language code list:\n\t"
         printf "defaults read 'Apple Global Domain' AppleLanguages"
