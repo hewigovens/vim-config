@@ -8,3 +8,4 @@
 	ui = true
 [core]
     editor = vim
+    ignorecase = false

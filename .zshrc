@@ -5,8 +5,11 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="powerline"
-ZSH_THEME="robbyrussell"
+
+ZSH_THEME="ys"
+if [[ -f ~/.oh-my-zsh/themes/ys-kolo.zsh-theme ]]; then
+    ZSH_THEME="ys-kolo"
+fi
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -35,26 +38,9 @@ if [[ -f ~/.vim/.alias ]]; then
     source ~/.vim/.alias
 fi
 
-# ethernet
-IPADDR0=`ifconfig en0 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
-# wifi
-IPADDR1=`ifconfig en1 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
-
-# display ip address on prompt
-if [[ ! -z $IPADDR0 ]]; then
-    IPADDR=$IPADDR0
-elif [[ ! -z $IPADDR1 ]]; then
-    IPADDR=$IPADDR1
-else
-    IPADDR=`hostname`
-fi
-
-export PROMPT='%{$fg[green]%}%n@$IPADDR$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} 
-% %# %{$reset_color%}'
+# export PROMPT='%{$fg[green]%}%n@$IPADDR$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} 
+# % %# %{$reset_color%}'
 # e.g. hewig@192.168.17.242 ➜  /Users/hewig/.vim/ git:(master)
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
-# autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && source `brew --prefix`/etc/autojump.sh
