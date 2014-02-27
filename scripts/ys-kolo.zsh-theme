@@ -9,7 +9,7 @@ zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
 zstyle ':vcs_info:*' enable git svn
 theme_precmd () {
     if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-        zstyle ':vcs_info:*' formats '[%b%c%u%B%F{cyan}]'
+        zstyle ':vcs_info:*' formats '%F{white}on %F{cyan}git:[%b%c%u%B%F{cyan}]'
     } else {
         zstyle ':vcs_info:*' formats ' [%b%c%u%B%F{red}●%F{cyan}]'
     }
@@ -35,16 +35,15 @@ function ip_address(){
 
 function ssh_connection() {
   if [[ -n $SSH_CONNECTION ]]; then
-    echo "%{$fg_bold[red]%}(ssh) "
+    echo "%B%F{red}(ssh) "
   fi
 }
 
 setopt prompt_subst
-PROMPT='%{$terminfo[bold]$fg[blue]%}# $(ssh_connection)%{$fg[cyan]%}%n%{$fg[white]%} at %{$fg[green]%}$(ip_address)%{$fg[white]%} in %B%F{yellow}%d%B%F{cyan} %{$fg[white]%}on%{$reset_color%} git:%{$fg[cyan]%}${vcs_info_msg_0_}%B%F{yellow} 
-%{$terminfo[bold]$fg[red]%}% %# %{$reset_color%}'
+PROMPT='%B%F{blue}# $(ssh_connection)%F{cyan}%n%F{white} at %F{green}$(ip_address)%F{white} in %B%F{yellow}%d%B%F{cyan} %F{cyan}${vcs_info_msg_0_}%B%F{yellow} 
+%B%F{red}% %# %{$reset_color%}'
 
-RPROMPT='⌚ %{$fg_bold[red]%}%*%{$reset_color%}'
-#PROMPT='%B%F{magenta}%c%B%F{green}${vcs_info_msg_0_}%B%F{magenta} %{$reset_color%}%% '
+RPROMPT='⌚ %B%F{red}%*%{$reset_color%}'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
