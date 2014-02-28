@@ -7,13 +7,14 @@ zstyle ':vcs_info:*' unstagedstr '%F{yellow}●'
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
 zstyle ':vcs_info:*' enable git svn
+
 theme_precmd () {
     if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
         zstyle ':vcs_info:*' formats '%F{white}on %B%F{cyan}git:[%b%c%u%B%F{cyan}]'
     } else {
-        zstyle ':vcs_info:*' formats ' [%b%c%u%B%F{red}●%F{cyan}]'
+        zstyle ':vcs_info:*' formats '%F{white}on %B%F{cyan}git:[%b%c%u%B%F{red}●%B%F{cyan}]'
     }
-
+    current_dir="${PWD/#$HOME/~}"
     vcs_info
 }
 
@@ -38,8 +39,6 @@ function ssh_connection() {
     echo "%B%F{red}(ssh) "
   fi
 }
-
-local current_dir="${PWD/#$HOME/~}"
 
 setopt prompt_subst
 PROMPT='%B%F{blue}# $(ssh_connection)%b%F{cyan}%n%F{white} at %b%F{green}$(ip_address)%F{white} in %B%F{yellow}${current_dir}%b%F{cyan} ${vcs_info_msg_0_}%B%F{yellow} 
