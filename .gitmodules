@@ -42,15 +42,12 @@
 	url = https://github.com/vim-scripts/The-NERD-tree.git
 [submodule "bundle/ropevim"]
 	path = bundle/ropevim
-	url = https://github.com/sontek/rope-vim.git
+	url = https://github.com/klen/rope-vim.git
 [submodule "bundle/cocoa.vim"]
 	path = bundle/cocoa.vim
 	url = git://github.com/msanders/cocoa.vim.git
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
-	url = git://github.com/Lokaltog/vim-easymotion.git
-[submodule "bundle/easymotion"]
-	path = bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
