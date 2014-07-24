@@ -13,4 +13,6 @@ ln -s ~/.vim/.vimrc ~/.vimrc
 ln -s ~/.vim/.bashrc ~/.bashrc
 ln -s ~/.vim/.zshrc ~/.zshrc
 
+cp -rf ~/.vim/scripts/ys-kolo.zsh-theme ~/.oh-my-zsh/themes/ys-kolo.zsh-theme
+
 exit 0
