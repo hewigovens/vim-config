@@ -38,6 +38,7 @@ if [[ -f ~/.vim/.alias ]]; then
     source ~/.vim/.alias
 fi
 
+export LANG=en_US.UTF-8
 # export PROMPT='%{$fg[green]%}%n@$IPADDR$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} 
 # % %# %{$reset_color%}'
 # e.g. hewig@192.168.17.242 ➜  /Users/hewig/.vim/ git:(master)

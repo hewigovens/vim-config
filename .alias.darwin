@@ -81,3 +81,29 @@ appsetting()
         #set +x
     fi
 }
+
+uplist()
+{
+    python <<EOF
+import pprint
+from Foundation import NSKeyedUnarchiver, NSUnarchiver, NSInvalidArgumentException
+argv = "$*"
+print(argv)
+if len(argv) <= 1:
+    print("Usage: uplist plist/to/unarchive")
+    exit(0)
+plist = None
+try:
+    plist = NSKeyedUnarchiver.unarchiveObjectWithFile_(argv)
+except:
+    try:
+        plisteditort = NSUnarchiver.unarchiveObjectWithFile_(argv)
+    except:
+        pass
+if not plist:
+    print("seems not a valid archived file?")
+else:
+    pp = pprint.PrettyPrinter(indent=4)
+    pp.pprint(plist)
+EOF
+}
