@@ -97,7 +97,7 @@ try:
     plist = NSKeyedUnarchiver.unarchiveObjectWithFile_(argv)
 except:
     try:
-        plisteditort = NSUnarchiver.unarchiveObjectWithFile_(argv)
+        plist = NSUnarchiver.unarchiveObjectWithFile_(argv)
     except:
         pass
 if not plist:
