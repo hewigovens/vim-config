@@ -46,4 +46,4 @@ export LANG=en_US.UTF-8
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
-export PATH=~/workspace/theos/bin:$PATH
+export PATH=/usr/local/sbin:~/workspace/theos/bin:~/workspace/android/sdk/platform-tools:$PATH

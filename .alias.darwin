@@ -107,3 +107,8 @@ else:
     pp.pprint(plist)
 EOF
 }
+
+dequarantine()
+{
+    xattr -d com.apple.quarantine "$*"
+}
