@@ -113,3 +113,8 @@ dequarantine()
 {
     xattr -d com.apple.quarantine "$*"
 }
+
+boot_verbose()
+{
+    sudo nvram boot-args="-v"
+}
