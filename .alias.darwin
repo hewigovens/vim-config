@@ -11,6 +11,7 @@ alias plistbuddy='/usr/libexec/PlistBuddy'
 alias plisteditor='open -b com.apple.PropertyListEditor'
 alias listallkext='kextstat -l'
 alias listkext='kextstat -l | grep -v apple'
+alias symbolicatecrash='/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash'
 
 show_desktop_icons()
 {
