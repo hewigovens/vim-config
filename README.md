@@ -1,6 +1,5 @@
 ##personal vim/zsh/bash configs
 
-
 ##Installation
 0. git clone https://github.com/hewigovens/vim-config ~/.vim
 1. cd script
