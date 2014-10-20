@@ -48,3 +48,4 @@ export LANG=en_US.UTF-8
 
 export PATH=/usr/local/sbin:~/workspace/theos/bin:~/workspace/android/sdk/platform-tools:$PATH
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+export GOPATH=~/workspace/go
