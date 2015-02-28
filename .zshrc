@@ -46,6 +46,9 @@ export LANG=en_US.UTF-8
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=' -R'
+
 export PATH=/usr/local/sbin:~/workspace/theos/bin:~/workspace/android/sdk/platform-tools:$PATH
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export GOPATH=~/workspace/go

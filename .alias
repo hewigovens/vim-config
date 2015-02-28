@@ -35,6 +35,9 @@ alias tl='tmux list-session'
 alias ta='tmux attach -t'
 alias td='tmux detach'
 
+# net
+alias ss-polipo='polipo socksParentProxy=localhost:1080 &'
+
 # functions, finally
 
 gbk2utf8()
