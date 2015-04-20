@@ -36,7 +36,7 @@ alias ta='tmux attach -t'
 alias td='tmux detach'
 
 # net
-alias ss-polipo='polipo socksParentProxy=localhost:1080 &'
+alias ss-polipo='polipo proxyAddress=0.0.0.0 socksParentProxy=localhost:1080 &'
 
 # functions, finally
 
