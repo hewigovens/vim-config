@@ -14,7 +14,6 @@ alias listallkext='kextstat -l'
 alias listkext='kextstat -l | grep -v apple'
 alias symbolicatecrash='/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash'
 alias hcat='/usr/local/bin/src-hilite-lesspipe.sh'
-alias man='man -P "col -b  | open -a /Applications/Safari.app -f"'
 
 show_desktop_icons()
 {

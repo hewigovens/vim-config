@@ -2,7 +2,7 @@
 
 ##Installation
 0. git clone https://github.com/hewigovens/vim-config ~/.vim
-1. cd script
+1. cd scripts
 1. ./install_submodules.sh
 2. ./install_configs.sh
 
