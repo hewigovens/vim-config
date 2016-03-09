@@ -16,21 +16,9 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/Command-T.git
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
-[submodule "bundle/pydoc"]
-	path = bundle/pydoc
-	url = https://github.com/fs111/pydoc.vim.git
-[submodule "bundle/pep8"]
-	path = bundle/pep8
-	url = https://github.com/vim-scripts/pep8.git
-[submodule "bundle/py.test"]
-	path = bundle/py.test
-	url = https://github.com/alfredodeza/pytest.vim.git
 [submodule "bundle/makegreen"]
 	path = bundle/makegreen
 	url = https://github.com/reinh/vim-makegreen
@@ -46,9 +34,6 @@
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
-[submodule "bundle/pydiction"]
-	path = bundle/pydiction
-	url = git://github.com/vim-scripts/Pydiction.git
 [submodule "bundle/vim-golang"]
 	path = bundle/vim-golang
 	url = git://github.com/jnwhiteh/vim-golang.git
@@ -94,3 +79,6 @@
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
+[submodule "bundle/swift.vim"]
+	path = bundle/swift.vim
+	url = https://github.com/keith/swift.vim.git

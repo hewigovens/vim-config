@@ -11,9 +11,6 @@ git submodule foreach git submodule update --init
 echo "install command-t..."
 (cd bundle/command-t/ruby/command-t && ruby extconf.rb && make) || echo "command-t installation failed"
 
-echo "patch pydiction keybindings to <C-J>"
-patch -p0 -i ~/.vim/scripts/keybinding.patch
-
 echo "check if need to install oh-my-zsh"
 if [ ! -d ~/.oh-my-zsh ]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -28,7 +25,7 @@ fi
 
 echo "try install ctags/autojump/wget"
 if [ -f /usr/local/bin/brew ]; then
-    brew install ctags autojump
+    brew install ctags 
 fi
 
 exit 0

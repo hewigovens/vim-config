@@ -53,3 +53,4 @@ export LESS=' -R'
 export PATH=/usr/local/sbin:~/workspace/theos/bin:~/workspace/android/sdk/platform-tools:$PATH
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export GOPATH=~/workspace/go
+export REACT_EDITOR=atom
