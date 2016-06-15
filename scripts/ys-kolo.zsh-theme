@@ -41,10 +41,10 @@ function ssh_connection() {
 }
 
 setopt prompt_subst
-PROMPT='%B%F{blue}# $(ssh_connection)%b%F{cyan}%n%F{white}@%b%F{green}$(ip_address)%F{white} in %B%F{yellow}${current_dir}%b%F{cyan} ${vcs_info_msg_0_}%B%F{yellow} 
+PROMPT='%B%F{blue}# ⌚  %B%F{red}%*%{$reset_color%} $(ssh_connection)%b%F{cyan}%n%F{white}@%b%F{green}$(ip_address)%F{white} in %B%F{yellow}${current_dir}%b%F{cyan} ${vcs_info_msg_0_}%B%F{yellow} 
 %B%F{red}% %# %{$reset_color%}'
 
-RPROMPT='⌚ %B%F{red}%*%{$reset_color%}'
+# RPROMPT='⌚ %B%F{red}%*%{$reset_color%}'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
