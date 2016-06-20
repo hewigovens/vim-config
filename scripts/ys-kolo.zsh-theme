@@ -23,12 +23,16 @@ function ip_address(){
     IPADDR0=`ifconfig en0 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
     # wifi
     IPADDR1=`ifconfig en1 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
+    # thunderbolt
+    IPADDR2=`ifconfig en4 2>/dev/null | grep -v inet6 | grep inet | awk '{print $2}'`
 
     # display ip address on prompt
     if [[ ! -z $IPADDR0 ]]; then
         echo $IPADDR0
     elif [[ ! -z $IPADDR1 ]]; then
         echo $IPADDR1
+    elif [[ ! -z $IPADDR2 ]]; then
+        echo $IPADDR2
     else
         echo `hostname`
     fi
