@@ -1,6 +1,6 @@
 # Nav
-alias l='ls -alhO'
-alias ll='ls -alhO@'
+alias l='ls -alh'
+alias ll='ls -alh@'
 
 # Utils
 alias op=open

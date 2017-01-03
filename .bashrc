@@ -92,6 +92,4 @@ export EDITOR='vim'  #Command line
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 export REACT_EDITOR=atom

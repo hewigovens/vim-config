@@ -29,7 +29,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python brew ruby node pod autojump)
+plugins=(git python brew ruby node pod docker gem osx thefuck tmux sudo rsync)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,13 +44,18 @@ export LC_ALL=en_US.UTF-8
 # % %# %{$reset_color%}'
 # e.g. hewig@192.168.17.242 ➜  /Users/hewig/.vim/ git:(master)
 
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R'
 
-export PATH=/usr/local/sbin:~/workspace/theos/bin:~/workspace/android/sdk/platform-tools:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:~/workspace/theos/bin:~/.rbenv/bin:$PATH
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export GOPATH=~/workspace/go
 export REACT_EDITOR=atom
+
+eval $(thefuck --alias)
+eval "$(rbenv init -)"
+# eval "$(docker-machine env default)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+. <(npm completion)
+ssh-add -K
