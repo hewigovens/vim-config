@@ -2,6 +2,7 @@
 	name = hewigovens
 	exmail = hewigovens@gmail.com
 	email = hewigovens@gmail.com
+	signingkey = 46C888773BCBB144D6DC5C49BBF8D5A526CF39B6
 [push]
 	default = simple
 [color]
@@ -9,3 +10,5 @@
 [core]
     editor = vim
     ignorecase = false
+[commit]
+	gpgsign = true

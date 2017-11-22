@@ -1,6 +1,6 @@
 "uncomment lines below to load pathogen
-"runtime bundle/vim-pathogen/autoload/pathogen.vim
-"call pathogen#infect()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 "Basic
 set nocompatible

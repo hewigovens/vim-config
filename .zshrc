@@ -47,10 +47,10 @@ export LC_ALL=en_US.UTF-8
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R'
 
-export PATH=/usr/local/sbin:/usr/local/bin:~/workspace/theos/bin:~/.rbenv/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:~/workspace/theos/bin:~/.rbenv/bin:$HOME/.cargo/bin:$PATH
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export GOPATH=~/workspace/go
-export REACT_EDITOR=atom
+export REACT_EDITOR=code
 
 eval $(thefuck --alias)
 eval "$(rbenv init -)"
