@@ -1,8 +1,7 @@
 [user]
 	name = hewigovens
-	exmail = hewigovens@gmail.com
-	email = hewigovens@gmail.com
-	signingkey = 46C888773BCBB144D6DC5C49BBF8D5A526CF39B6
+	email = 360470+hewigovens@users.noreply.github.com
+	signingKey = 46C888773BCBB144D6DC5C49BBF8D5A526CF39B6
 [push]
 	default = simple
 [color]
@@ -10,5 +9,6 @@
 [core]
     editor = vim
     ignorecase = false
+	excludesfile = /Users/hewig/.gitignore
 [commit]
 	gpgsign = true

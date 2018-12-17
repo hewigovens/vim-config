@@ -29,7 +29,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python brew ruby node pod docker gem osx thefuck tmux sudo rsync)
+plugins=(git python brew ruby node pod docker gem bundle react-native osx thefuck tmux sudo rsync)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,15 +47,21 @@ export LC_ALL=en_US.UTF-8
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R'
 
-export PATH=/usr/local/sbin:/usr/local/bin:~/workspace/theos/bin:~/.rbenv/bin:$HOME/.cargo/bin:$PATH
-export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export GOPATH=~/workspace/go
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
+export PATH=/usr/local/sbin:/usr/local/bin:~/workspace/theos/bin:~/.rbenv/bin:$HOME/.cargo/bin:$PATH
+export PATH=~/workspace/geth/bin:$PATH
+export PATH=~/workspace/google-cloud-sdk/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
+export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
+export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export REACT_EDITOR=code
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 eval $(thefuck --alias)
 eval "$(rbenv init -)"
-# eval "$(docker-machine env default)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 . <(npm completion)
 ssh-add -K
+eval "$(pipenv --completion)"

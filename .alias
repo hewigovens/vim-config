@@ -20,6 +20,8 @@ alias cls='clear'
 
 # custom git short, see all alias: alias | grep git
 alias gs='git status'
+alias gcl='git clone'
+alias gco='git checkout'
 alias gl='git log -p --color --stat --graph'
 alias glf='git log -p --color --stat --graph --follow'
 alias gf='git diff --color --ignore-space-at-eol'
