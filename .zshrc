@@ -51,15 +51,12 @@ export GOPATH=~/workspace/go
 export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
 export ANDROID_HOME=/usr/local/share/android-sdk
 export PATH=/usr/local/sbin:/usr/local/bin:~/workspace/theos/bin:~/.rbenv/bin:$HOME/.cargo/bin:$PATH
-export PATH=~/workspace/geth/bin:$PATH
-export PATH=~/workspace/google-cloud-sdk/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 export PATH=~/workspace/flutter/bin:$PATH
 export PATH=/usr/local/opt/llvm/bin:$PATH
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export REACT_EDITOR=code
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 eval $(thefuck --alias)
 eval "$(rbenv init -)"

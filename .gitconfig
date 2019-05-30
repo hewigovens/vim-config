@@ -1,7 +1,7 @@
 [user]
 	name = hewigovens
 	email = 360470+hewigovens@users.noreply.github.com
-	signingKey = 46C888773BCBB144D6DC5C49BBF8D5A526CF39B6
+	signingKey = 2ACDE05EC307A30D576048D4C3BFC7A22B64354B
 [push]
 	default = simple
 [color]

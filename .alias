@@ -41,8 +41,7 @@ alias tl='tmux list-session'
 alias ta='tmux attach -t'
 alias td='tmux detach'
 
-# net
-alias ss-polipo='polipo proxyAddress=0.0.0.0 socksParentProxy=localhost:1080 &'
+alias pdi="pod install --verbose"
 
 # functions, finally
 

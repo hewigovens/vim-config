@@ -23,9 +23,4 @@ if [ ! -f /usr/local/bin/brew ]; then
     fi
 fi
 
-echo "try install ctags/autojump/wget"
-if [ -f /usr/local/bin/brew ]; then
-    brew install ctags 
-fi
-
 exit 0
