@@ -29,6 +29,11 @@ alias gft='git difftool'
 alias gpl='git pull && git submodule foreach git pull'
 alias gpu='git push && git submodule foreach git push'
 alias gsm='git status && git submodule foreach git status'
+alias grc='git rebase --continue'
+alias gra='git rebase --abort'
+
+# pod
+alias pdi="pod install --verbose"
 
 # tmux
 alias tn='tmux new-session -s'
