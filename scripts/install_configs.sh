@@ -8,11 +8,14 @@ fi
 rm -rf ~/.vimrc
 rm -rf ~/.bashrc
 rm -rf ~/.zshrc
+rm -rf ~/.gitconfig
 
 ln -s ~/.vim/.vimrc ~/.vimrc
 ln -s ~/.vim/.bashrc ~/.bashrc
 ln -s ~/.vim/.zshrc ~/.zshrc
+ln -s ~/.vim/.gitconfig ~
 
+mkdir -pv ~/.oh-my-zsh/themes
 cp -rf ~/.vim/scripts/ys-kolo.zsh-theme ~/.oh-my-zsh/themes/ys-kolo.zsh-theme
 
 exit 0

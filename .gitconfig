@@ -9,7 +9,7 @@
 [core]
     editor = vim
     ignorecase = false
-	excludesfile = /Users/hewig/.gitignore
+    excludesfile = /Users/hewig/.gitignore
 [commit]
 	gpgsign = true
 [merge]
