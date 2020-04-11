@@ -1,12 +1,14 @@
-##personal vim/zsh/bash configs
+## personal vim/zsh/bash configs
 
-##Installation
+## Installation
+
 0. git clone https://github.com/hewigovens/vim-config ~/.vim
 1. cd scripts
 1. ./install_submodules.sh
 2. ./install_configs.sh
 
-##Vim
+## Vim
+
 * Syntax highlighting
 * Line numbers
 * Highlight search terms
@@ -32,7 +34,7 @@
 * - bundle/snipmate, bundle/supertab, bundle/neocomplcache
 * Theme Desert
 
-##Handy Shortcuts
+## Handy Shortcuts
 
 * plistbuddy -> Shortcut to `/usr/libexec/PlistBuddy`
 * plisteditor -> Shortcut to XCode Property List Editor
