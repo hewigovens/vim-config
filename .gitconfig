@@ -20,3 +20,7 @@
 	tool = vscode
 [difftool "vscode"]
 	cmd = "code --wait --diff $LOCAL $REMOTE"
+[pager]
+    log = /usr/local/bin/diffr | less -R
+    show = /usr/local/bin/diffr | less -R
+    diff = /usr/local/bin/diffr | less -R

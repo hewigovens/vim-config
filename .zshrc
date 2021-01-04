@@ -6,7 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-ZSH_THEME="ys"
+ZSH_THEME="spaceship"
 if [[ -f ~/.oh-my-zsh/themes/ys-kolo.zsh-theme ]]; then
     ZSH_THEME="ys-kolo"
 fi
@@ -14,22 +14,13 @@ fi
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python brew ruby node pod docker gem bundle react-native osx thefuck tmux sudo rsync)
+plugins=(git brew pod docker thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,19 +39,24 @@ export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R'
 
 export GOPATH=~/workspace/go
-export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
-export ANDROID_HOME=/usr/local/share/android-sdk
-export PATH=/usr/local/sbin:/usr/local/bin:~/workspace/theos/bin:~/.rbenv/bin:$HOME/.cargo/bin:$PATH
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
+export ANDROID_HOME=~/Library/Android/sdk
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export PATH=/usr/local/sbin:/usr/local/bin:~/.local/bin:~/.rbenv/bin:$HOME/.cargo/bin:$PATH:$JAVA_HOME/bin:$ANDROID_HOME/tools/bin
 export PATH=$GOPATH/bin:$PATH
 export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 export PATH=~/workspace/flutter/bin:$PATH
-export PATH=/usr/local/opt/llvm/bin:$PATH
-export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+#export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export REACT_EDITOR=code
+export EDITOR=vim
+export NDK_CCACHE=/usr/local/bin/ccache
+export GO111MODULE=on
 
 eval $(thefuck --alias)
 eval "$(rbenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-. <(npm completion)
 ssh-add -K
+
+export RELEASE_STORE_FILE=~
+export ANDROID_PUBLISHER_CREDENTIALS={}

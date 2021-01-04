@@ -3,3 +3,5 @@
 .netrwhist
 *.swp
 undodir/*
+.vscode/
+.history/

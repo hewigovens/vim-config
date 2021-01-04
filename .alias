@@ -34,6 +34,8 @@ alias gra='git rebase --abort'
 
 # pod
 alias pdi="pod install --verbose"
+alias pdu="pod install --verbose --repo-update"
+alias pd="pod install"
 
 # tmux
 alias tn='tmux new-session -s'
@@ -42,6 +44,7 @@ alias ta='tmux attach -t'
 alias td='tmux detach'
 
 alias pdi="pod install --verbose"
+alias dla='youtube-dl --ignore-errors --output "%(title)s.%(ext)s" --extract-audio --audio-format m4a'
 
 # functions, finally
 

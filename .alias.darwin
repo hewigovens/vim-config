@@ -14,6 +14,8 @@ alias listallkext='kextstat -l'
 alias listkext='kextstat -l | grep -v apple'
 alias symbolicatecrash='/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash'
 alias hcat='/usr/local/bin/src-hilite-lesspipe.sh'
+alias sha1='shasum'
+alias sha256='shasum -a 256'
 
 show_desktop_icons()
 {
@@ -35,22 +37,6 @@ tell application "Finder"
 end tell
 EOF
     open -a Finder
-}
-
-stop_goagent()
-{
-    sudo launchctl unload /Library/LaunchDaemons/org.goagent.macos.plist
-}
-
-start_goagent()
-{
-    sudo launchctl load /Library/LaunchDaemons/org.goagent.macos.plist
-}
-
-restart_goagent()
-{
-    stop_goagent
-    start_goagent
 }
 
 appsetting()
@@ -119,4 +105,10 @@ dequarantine()
 boot_verbose()
 {
     sudo nvram boot-args="-v"
+}
+
+export_proxy()
+{
+export http_proxy=http://127.0.0.1:8087
+export all_proxy=socks5://127.0.0.1:1080
 }
