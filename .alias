@@ -26,6 +26,7 @@ alias gl='git log -p --color --stat --graph'
 alias glf='git log -p --color --stat --graph --follow'
 alias gf='git diff --color --ignore-space-at-eol'
 alias gft='git difftool'
+alias gmt='git mergetool'
 alias gpl='git pull && git submodule foreach git pull'
 alias gpu='git push && git submodule foreach git push'
 alias gsm='git status && git submodule foreach git status'
@@ -63,11 +64,22 @@ glm()
     git log -p --color --stat --graph
     popd
 }
+
 gfm()
 {
     pushd "$1"
     git diff --color --ignore-space-at-eol
     popd
+}
+
+hex2int() 
+{
+    echo $((16#$1))
+}
+
+int2hex()
+{
+   printf '%x\n' $1
 }
 
 green() { printf "\033[32m${1}\033[0m\n"; }

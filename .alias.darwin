@@ -16,6 +16,7 @@ alias symbolicatecrash='/Applications/Xcode.app/Contents/SharedFrameworks/DTDevi
 alias hcat='/usr/local/bin/src-hilite-lesspipe.sh'
 alias sha1='shasum'
 alias sha256='shasum -a 256'
+alias gitup='gitup commit'
 
 show_desktop_icons()
 {

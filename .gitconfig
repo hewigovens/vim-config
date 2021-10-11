@@ -3,24 +3,54 @@
 	email = 360470+hewigovens@users.noreply.github.com
 	signingKey = 2ACDE05EC307A30D576048D4C3BFC7A22B64354B
 [push]
-	default = simple
+	default = current
 [color]
 	ui = true
 [core]
-    editor = vim
-    ignorecase = false
-    excludesfile = /Users/hewig/.gitignore
+	editor = vim
+	ignorecase = false
+	excludesfile = /Users/hewig/.gitignore
 [commit]
 	gpgsign = true
 [merge]
 	tool = vscode
 [mergetool "vscode"]
-	cmd = "code --wait $MERGED"
+	cmd = code --wait $MERGED
 [diff]
 	tool = vscode
+
 [difftool "vscode"]
 	cmd = "code --wait --diff $LOCAL $REMOTE"
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	ff = only
+[init]
+	defaultBranch = master
+
 [pager]
-    log = /usr/local/bin/diffr | less -R
-    show = /usr/local/bin/diffr | less -R
-    diff = /usr/local/bin/diffr | less -R
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+
+[alias]
+    set-upstream = \
+       !git branch \
+           --set-upstream-to=origin/`git symbolic-ref --short HEAD`
