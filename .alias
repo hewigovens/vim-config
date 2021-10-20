@@ -47,6 +47,10 @@ alias td='tmux detach'
 alias pdi="pod install --verbose"
 alias dla='youtube-dl --ignore-errors --output "%(title)s.%(ext)s" --extract-audio --audio-format m4a'
 
+# wc
+alias wc_cmake="cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Debug"
+alias wc_make="make -Cbuild -j12 tests && build/tests/tests tests"
+
 # functions, finally
 
 gbk2utf8()
