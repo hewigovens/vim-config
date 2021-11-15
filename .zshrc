@@ -41,8 +41,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/H
 export PATH=/usr/local/sbin:/usr/local/bin:~/.local/bin:~/.rbenv/bin:$HOME/.cargo/bin:$PATH:$JAVA_HOME/bin:$ANDROID_HOME/tools/bin
 export PATH=$GOPATH/bin:$PATH
 export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
-export PATH=~/workspace/flutter/bin:$PATH
-#export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+export PATH=/opt/homebrew/sbin:/opt/homebrew/bin:$PATH
 export REACT_EDITOR=code
 export EDITOR=vim
 export NDK_CCACHE=/usr/local/bin/ccache
@@ -50,7 +49,7 @@ export NDK_CCACHE=/usr/local/bin/ccache
 eval "$(rbenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-ssh-add -K
+ssh-add --apple-use-keychain
 
 export RELEASE_STORE_FILE=~
 export ANDROID_PUBLISHER_CREDENTIALS={}

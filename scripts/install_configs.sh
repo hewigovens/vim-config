@@ -14,6 +14,7 @@ ln -s ~/.vim/.vimrc ~/.vimrc
 ln -s ~/.vim/.bashrc ~/.bashrc
 ln -s ~/.vim/.zshrc ~/.zshrc
 ln -s ~/.vim/.gitconfig ~
+ln -s ~/.vim/.gitignore ~
 
 mkdir -pv ~/.oh-my-zsh/themes
 cp -rf ~/.vim/scripts/ys-kolo.zsh-theme ~/.oh-my-zsh/themes/ys-kolo.zsh-theme
