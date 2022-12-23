@@ -93,3 +93,4 @@ export EDITOR='vim'  #Command line
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export REACT_EDITOR=atom
+. "$HOME/.cargo/env"
